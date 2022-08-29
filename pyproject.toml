@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "betterbutterbot"
+version = "0.1.0"
+description = ""
+authors = ["MrCapsLock <me@mrcapslock.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10.6"
+Pyrogram = "^2.0.41"
+TgCrypto = "^1.2.3"
+youtube_dl = "^2021.12.17"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
