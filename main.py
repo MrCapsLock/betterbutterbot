@@ -6,7 +6,7 @@ tz = environ.get("TIMEZONE", "Asia/Tehran")
 app = Client(
     "better-butter-bot",
     session_string=environ["TG_STORE"],
-    plugins=dict(root="BetterButterBot/plugins"),
+    plugins=dict(root="plugins"),
 )
 
 app.run()

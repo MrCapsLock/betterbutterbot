@@ -2,5 +2,6 @@ version: '3.7'
 services:
   betterbutterbot:
     container_name: better-butter-bot
-    image: mrcapslock/better-butter-bot:latest
+    # image: mrcapslock/better-butter-bot:latest
+    build: .
     env_file: .env

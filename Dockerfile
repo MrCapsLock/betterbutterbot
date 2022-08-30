@@ -1,7 +1,10 @@
 FROM python:3.10-slim
 
+# Labels
+LABEL maintainer = "me@mrcapslock.com"
+
 # Select workdir
-WORKDIR /usr/share/betterbutterbot
+WORKDIR /betterbutterbot
 
 # Install dependency
 RUN apt update && apt upgrade -y
@@ -12,11 +15,8 @@ COPY pyproject.toml .
 COPY poetry.lock .
 RUN poetry install --no-dev
 
-# Labels
-LABEL maintainer = "me@mrcapslock.com"
-
 # Install
 COPY . .
 
 # Run scheduled
-CMD [ "poetry", "run", "python3", "personal-bot/main.py" ]
+CMD [ "poetry", "run", "python3", "main.py" ]
